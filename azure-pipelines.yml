@@ -15,10 +15,10 @@ variables:
   buildConfiguration: 'Release'
 
 steps: UseDotNet@2
-diplayName: 'Use .NET SDK 6.x'
+displayName: 'Use .NET SDK 6.x'
 inputs:
-packageType: sdk
-version: '6.x'
+  packageType: sdk
+  version: '6.x'
 
 - task: Npm@1
   displayName: 'Run NPM install'
@@ -47,4 +47,3 @@ version: '6.x'
     command: 'build'
     arguments: '--no-restore --configuration Release'
     projects: '**/*.csproj'
-    
