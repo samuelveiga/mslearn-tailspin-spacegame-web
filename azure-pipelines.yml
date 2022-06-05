@@ -14,11 +14,12 @@ pool:
 variables:
   buildConfiguration: 'Release'
 
-steps: UseDotNet@2
-displayName: 'Use .NET SDK 6.x'
-inputs:
-  packageType: sdk
-  version: '6.x'
+steps:
+- task: UseDotNet@2
+  displayName: 'Use .NET SDK 6.x'
+  inputs:
+    packageType: sdk
+    version: '6.x'
 
 - task: Npm@1
   displayName: 'Run NPM install'
